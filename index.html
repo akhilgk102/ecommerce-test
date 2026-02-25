@@ -7,22 +7,24 @@
   <h1>Product List</h1>
   <div id="products"></div>
 
-  <script>
-    fetch('/data/products.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('products');
-        data.forEach(product => {
-          container.innerHTML += `
-            <div>
-              <img src="${product.image}" width="150">
-              <h3>${product.title}</h3>
-              <p>₹${product.price}</p>
-            </div>
-          `;
-        });
-      });
-  </script>
+<script>
+fetch('/data/products.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('products');
+    container.innerHTML = '';
+
+    data.products.forEach(product => {
+      container.innerHTML += `
+        <div>
+          <img src="${product.image}" width="150">
+          <h3>${product.title}</h3>
+          <p>₹${product.price}</p>
+        </div>
+      `;
+    });
+  });
+</script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {

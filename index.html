@@ -8,17 +8,23 @@
   <div id="products"></div>
 
 <script>
-fetch('/data/products-1.json')
+fetch('/data/products.json')
   .then(res => res.json())
-  .then(product => {
+  .then(data => {
     const container = document.getElementById('products');
-    container.innerHTML = `
-      <div>
-        <img src="${product.image}" width="150">
-        <h3>${product.title}</h3>
-        <p>₹${product.price}</p>
-      </div>
-    `;
+    container.innerHTML = '';
+
+    data.products.forEach(product => {
+      container.innerHTML += `
+        <div style="margin-bottom:20px;">
+          <a href="product.html?slug=${product.slug}" style="text-decoration:none;color:black;">
+            <img src="${product.image}" width="150">
+            <h3>${product.title}</h3>
+            <p>₹${product.price}</p>
+          </a>
+        </div>
+      `;
+    });
   });
 </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

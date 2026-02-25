@@ -1,3 +1,11 @@
 {
-  "products": []
+  "products": [
+    {
+      "title": "test",
+      "slug": "test",
+      "price": 250,
+      "image": "/images/wp13929453-samurai-laptop-wallpapers.png",
+      "description": "test desc"
+    }
+  ]
 }

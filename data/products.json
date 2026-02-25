@@ -6,6 +6,13 @@
       "price": 250,
       "image": "/images/wp13929453-samurai-laptop-wallpapers.png",
       "description": "test desc"
+    },
+    {
+      "title": "test2",
+      "slug": "test2",
+      "price": 100,
+      "image": "/images/8467005.jpg",
+      "description": "testdesc"
     }
   ]
 }

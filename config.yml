@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: akhilgk102/ecommerce-test
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "data"
+    create: true
+    format: "json"
+    slug: "products"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Image", name: "image", widget: "image" }

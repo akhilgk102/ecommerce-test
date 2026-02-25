@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: akhilgk102/ecommerce-test
+  name: git-gateway
   branch: main
 
 media_folder: "images"
